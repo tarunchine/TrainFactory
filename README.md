@@ -3,15 +3,14 @@
 * I am using react dnd libary for drap and drop functionality
     https://react-dnd.github.io/react-dnd/
 * To see the app
-    git clone https://github.com/tarunchine/TrainFactory.git
-    cd TrainFactory/
-    npm install
-    npm start
+    * git clone https://github.com/tarunchine/TrainFactory.git
+    * cd TrainFactory/
+    * npm install
+    * npm start
+    * open http://localhost:3000/ in you browser
 
-    then open http://localhost:3000/ in you browser
 
-
-### Develop's Note
+### Developer's Note
 * I am using scss 
 * I am using flex box model of css3
 * Not much validation done on arrival and departure time (only checking that it should be negative or greater than 12)
