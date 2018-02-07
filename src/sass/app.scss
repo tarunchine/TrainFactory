@@ -1,0 +1,117 @@
+@mixin crossBrowser($property, $val){
+  -webkit-#{$property}: $val;
+     -moz-#{$property}: $val;
+      -ms-#{$property}: $val;
+          #{$property}: $val;
+}
+@mixin crossBrowserFlex(){
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+* {
+    margin: 0;
+}
+html, body, #root , .container{
+    height: 100%;
+}
+.container {
+    @include crossBrowserFlex();
+}
+.sidebar {
+    @include crossBrowserFlex();
+    @include crossBrowser('flex', 1);
+    @include crossBrowser('flex-direction', column);
+    @include crossBrowser('justify-content', center);
+}
+.sidebar__train-part {
+    margin: 10px auto;
+    border: 2px solid #ccc;
+    padding: 10px;
+    box-shadow: 5px 5px 5px #888888;
+    width: 100px;
+}
+.sidebar__train-part img, .train-part img {
+  width: 100px;
+}
+.maincontent {
+    @include crossBrowserFlex();
+    @include crossBrowser('flex', 7);
+    @include crossBrowser('flex-direction', column);
+    @include crossBrowser('justify-content', space-between);
+    margin: 20px auto;
+}
+.maincontent__heading {
+    text-align: center;
+}
+.maincontent__content {
+    @include crossBrowserFlex();
+    @include crossBrowser('flex-direction', column);
+    @include crossBrowser('justify-content', space-between);
+    @include crossBrowser('flex', 1);
+    border: 1px solid #ccc;
+    padding:  10px;
+    margin: 10px;
+}
+.train {
+    padding: 5px 10px;
+}
+.train__name {
+    padding: 3px;
+}
+.train__details {
+    @include crossBrowserFlex();
+    @include crossBrowser('justify-content', space-between);
+    @include crossBrowser('align-items', center);
+}
+.train__list {
+    @include crossBrowser('flex', 2);
+    padding-bottom: 80px;
+    overflow-y: auto;
+}
+.train__timing {
+    text-align: right;
+}
+.train__timing  input {
+    width: 50px;
+}
+
+.train:nth-child(even) {
+    background: #E8DAEF;
+}
+.train:nth-child(odd) {
+    background: #D5F5E3;
+}
+
+
+.train__list__message {
+    @include crossBrowserFlex();
+    @include crossBrowser('align-items', center);
+    @include crossBrowser('justify-content', center);
+    font-size: 1.2em;
+    opacity: .4;
+    height: 100%;
+}
+
+.train__list__message p {
+    padding: 20px;
+    border: 2px dotted #000;
+}
+
+.maincontent__calculatetrack{
+    padding: 10px;
+    text-align: center;
+}
+.button {
+    border-radius: 9px;
+    padding: 5px 10px;
+    color: #fff;
+}
+.button--primary {
+    background-color: green;
+}
+
+
