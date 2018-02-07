@@ -7,16 +7,17 @@
     * cd TrainFactory/
     * npm install
     * npm start
-    * open http://localhost:3000/ in you browser
+    * open http://localhost:3000/ in your browser
 
 
 ### Developer's Note
+
 * I am using scss 
 * I am using flex box model of css3
 * Not much validation done on arrival and departure time (only checking that it should be negative or greater than 12)
-    below cases are not handled due to time constraint
-        Departure time should not be before the arrival time
-        I have only consider lowercase 'am'/'pm'  (10am will work but not 10AM)
+    * below cases are not handled due to time constraint
+        * Departure time should not be before the arrival time
+        * I have only consider lowercase 'am'/'pm'  (10am will work but not 10AM)
         
 * I am not using redux
 * I have not setup local images to work with webpack, i am using images for external path only
